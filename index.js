@@ -184,13 +184,13 @@ class DropdownMenu extends Component {
   render() {
 
     return (
-      <View style={{flexDirection: 'column', flex: 1}} >
+      <View style={{flexDirection: 'column', flex: 1,justifyContent:'center',alignItems:'center'}} >
   <View style={{
       flexDirection: 'row', borderWidth:1,
       borderRadius:4,
       borderColor:"#b1b1b1",
       width:150,
-      margin:10,
+      // margin:10,
         backgroundColor: this.props.bgColor ? this.props.bgColor : this.defaultConfig.bgColor}} >
     {
       this.props.data.map((rows, index) =>
