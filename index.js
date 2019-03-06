@@ -198,7 +198,7 @@ class DropdownMenu extends Component {
       activeOpacity={1}
       onPress={this.openOrClosePanel.bind(this, index)}
       key={index}
-      style={{flex: 1, height: 35, alignItems: "center", justifyContent: "center"}} >
+      style={{flex: 1, height: 30, alignItems: "center", justifyContent: "center"}} >
     <View style={{flexDirection: 'row', alignItems: "center", justifyContent: "center"}} >
     <Text
       style={[
