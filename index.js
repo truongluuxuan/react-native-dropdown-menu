@@ -72,7 +72,7 @@ class DropdownMenu extends Component {
       }
 
       return (
-        <View style={{width:150,marginTop:20,marginLeft:10,position: 'absolute', left: 0, right: 0, top: 40, bottom: 0}}>
+        <View style={{width:150,marginTop:10,marginLeft:10,position: 'absolute', left: 0, right: 0, top: 40, bottom: 0}}>
     <TouchableOpacity onPress={() => this.openOrClosePanel(this.state.activityIndex)} activeOpacity={1} style={{position: 'absolute', left: 0, right: 0, top: 0, bottom: 0}}>
     <View style={{opacity: 0.4, backgroundColor: 'white', flex: 1 }} />
     </TouchableOpacity>
@@ -198,7 +198,7 @@ class DropdownMenu extends Component {
       activeOpacity={1}
       onPress={this.openOrClosePanel.bind(this, index)}
       key={index}
-      style={{flex: 1, height: 48, alignItems: "center", justifyContent: "center"}} >
+      style={{flex: 1, height: 35, alignItems: "center", justifyContent: "center"}} >
     <View style={{flexDirection: 'row', alignItems: "center", justifyContent: "center"}} >
     <Text
       style={[
