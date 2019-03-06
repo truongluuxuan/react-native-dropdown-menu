@@ -1,7 +1,7 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {View, Text, Image, TouchableOpacity, ScrollView, Animated, Easing, StyleSheet} from 'react-native';
+import {View, Text, TouchableHighlight, Image, TouchableOpacity, ScrollView, Animated, Easing, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 
 class DropdownMenu extends Component {
@@ -72,9 +72,9 @@ class DropdownMenu extends Component {
       }
 
       return (
-        <View style={{position: 'absolute', left: 0, right: 0, top: 40, bottom: 0}}>
+        <View style={{width:150,marginTop:20,marginLeft:10,position: 'absolute', left: 0, right: 0, top: 40, bottom: 0}}>
     <TouchableOpacity onPress={() => this.openOrClosePanel(this.state.activityIndex)} activeOpacity={1} style={{position: 'absolute', left: 0, right: 0, top: 0, bottom: 0}}>
-    <View style={{opacity: 0.4, backgroundColor: 'black', flex: 1 }} />
+    <View style={{opacity: 0.4, backgroundColor: 'white', flex: 1 }} />
     </TouchableOpacity>
 
       <ScrollView style={[{position: 'absolute', top: 0, left: 0, right: 0, backgroundColor: 'white'}, heightStyle]} >
@@ -186,7 +186,11 @@ class DropdownMenu extends Component {
     return (
       <View style={{flexDirection: 'column', flex: 1}} >
   <View style={{
-      flexDirection: 'row',
+      flexDirection: 'row', borderWidth:1,
+      borderRadius:4,
+      borderColor:"#b1b1b1",
+      width:150,
+      margin:10,
         backgroundColor: this.props.bgColor ? this.props.bgColor : this.defaultConfig.bgColor}} >
     {
       this.props.data.map((rows, index) =>
