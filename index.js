@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import {View, Text,Dimensions, TouchableHighlight, Image, TouchableOpacity, ScrollView, Animated, Easing, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 
-var rong = (Dimensions.get('screen').width/2-150)/2;
+var rong = (Dimensions.get('screen').width/2-170)/2;
 
 class DropdownMenu extends Component {
 
@@ -38,7 +38,7 @@ class DropdownMenu extends Component {
       return (
         <View style={{flex: 1, justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 15, flexDirection: 'row'}} >
     <Text
-    numberOfLines={1}
+    numberOfLines={2}
     ellipsizeMode="tail"
       style={[
         styles.item_text_style,
@@ -56,7 +56,7 @@ class DropdownMenu extends Component {
       return (
         <View style={{flex: 1, justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 15, flexDirection: 'row'}} >
     <Text 
-    numberOfLines={1}
+    numberOfLines={2}
     ellipsizeMode="tail"
     style={[
         styles.item_text_style,
@@ -79,7 +79,7 @@ class DropdownMenu extends Component {
       }
 
       return (
-        <View style={{marginLeft:rong,width:150,position: 'absolute',marginTop: -8, left: 0, right: 0, top: 40, bottom: 0}}>
+        <View style={{marginLeft:rong,width:170,position: 'absolute',marginTop: 5, left: 0, right: 0, top: 40, bottom: 0}}>
     <TouchableOpacity onPress={() => this.openOrClosePanel(this.state.activityIndex)} activeOpacity={1} style={{position: 'absolute', left: 0, right: 0, top: 0, bottom: 0}}>
     <View style={{opacity: 0.4, backgroundColor: 'white', flex: 1 }} />
     </TouchableOpacity>
@@ -197,7 +197,7 @@ class DropdownMenu extends Component {
       borderRadius:4,
       padding:10,
       borderColor:"#b1b1b1",
-      width:150,
+      width:170,
       // margin:10,
         backgroundColor: this.props.bgColor ? this.props.bgColor : this.defaultConfig.bgColor}} >
     {
@@ -206,10 +206,10 @@ class DropdownMenu extends Component {
       activeOpacity={1}
       onPress={this.openOrClosePanel.bind(this, index)}
       key={index}
-      style={{flex: 1, height: 20, alignItems: "center", justifyContent: "center"}} >
+      style={{flex: 1,maxHeight:30,  alignItems: "center", justifyContent: "center"}} >
     <View style={{flexDirection: 'row', alignItems: "center", justifyContent: "center"}} >
     <Text
-    numberOfLines={1}
+    numberOfLines={2}
     ellipsizeMode="tail"
       style={[
         styles.title_style,
@@ -252,13 +252,13 @@ DropdownMenu.propTypes = {
 
 const styles = StyleSheet.create({
   title_style: {
-    paddingLeft: 5,
-    paddingRight: 5,
-    fontSize: 14,
+    paddingLeft: 2,
+    paddingRight: 2,
+    fontSize: 10,
   },
   item_text_style: {
     color: '#333333',
-    fontSize: 14
+    fontSize: 10
   }
 });
 
